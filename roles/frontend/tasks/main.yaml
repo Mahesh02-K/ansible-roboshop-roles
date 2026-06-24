@@ -37,6 +37,8 @@
     remote_src: yes
 
 - name: removing default nginx conf file
+  tags:
+  - import
   ansible.builtin.file:
     path: /etc/nginx/nginx.conf
     state: absent
