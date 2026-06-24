@@ -1,15 +1,14 @@
 - name: app setup
   include_role:
-    name: app-setup
-    tasks_from: common
+    name: common
+    tasks_from: app-setup
 
-- name: python3 installation
+- name: python setup
   include_role:
-    name: python
-    tasks_from: common
+    name: common
+    tasks_from: python
 
 - name: systemd setup
   include_role:
-    name: systemd
-    tasks_from: common
-
+    name: common
+    tasks_from: systemd
