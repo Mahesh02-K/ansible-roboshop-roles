@@ -19,8 +19,6 @@
     state: present
 
 - name: check products loaded or not
-  tags:
-  - import
   ansible.builtin.command: mongosh --host mongodb.kakuturu.online --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
   register: catalogue_output
 
