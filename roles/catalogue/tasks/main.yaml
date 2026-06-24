@@ -19,6 +19,8 @@
     state: present
 
 - name: check products loaded or not
+  tags:
+  - import
   ansible.builtin.command: mongosh --host mongodb.kakuturu.online --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
   register: catalogue_output
 
@@ -27,8 +29,6 @@
     msg: "{{ catalogue_output }}"
 
 - name: load products
-  tags:
-  - import
   ansible.builtin.shell: mongosh --host mongodb.kakuturu.online < /app/db/master-data.js
   when: catalogue_output.stdout | int < 0 #if stdout value is greater than 0 then data is already loaded.
 
