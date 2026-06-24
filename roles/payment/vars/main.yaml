@@ -1,0 +1,3 @@
+CART_HOST: cart.kakuturu.online
+USER_HOST: user.kakuturu.online
+RABBITMQ_HOST: rabbitmq.kakuturu.online
