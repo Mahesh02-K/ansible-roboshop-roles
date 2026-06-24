@@ -1,0 +1,5 @@
+CATALOGUE_HOST: catalogue.kakuturu.online
+USER_HOST: user.kakuturu.online
+CART_HOST: cart.kakuturu.online
+SHIPPING_HOST: shipping.kakuturu.online
+PAYMENT_HOST: payment.kakuturu.online
